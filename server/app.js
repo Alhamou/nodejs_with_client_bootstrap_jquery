@@ -5,4 +5,8 @@ const path = require("path")
 app.use(express.static(path.join(__dirname, "../src")))
 
 
-app.listen(3000)
+
+const port = process.env.PORT || 3000;
+app.listen(port, function(){
+    console.log("App run on Port", port)
+})
